@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Complex Validation</title>
+    
+    <script src ="validations.js"></script>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+    <form action="mailto:muma.sanmartin2011@gmail.com" method="POST" id="formelements" name="formelements">
+        <div id="fullpage">
+            <div>
+                <a href="..\main.html" style="padding: 5px; background-color: cornflowerblue;">Back to Main</a>
+            </div>
+
+            <h1>Contact Us.</h1>
+
+            <section style="padding: 5px;">
+                <span>Email Me Here</span>
+                <a href="mailto:muma.sanmartin2011@gmail.com?subject=Reaching20%Out&body=How%20are%20you">Click Here</a>
+            </section>
+                 
+            <img src="https://www.codester.com/static/uploads/items/000/015/15191/preview-xl.jpg" class="imageLawyer">
+
+        <table>
+            <tr>
+                <td class="label_col">First Name</td>
+                <td class="input_col"><input type="text" name="firstname" id="firstname" onblur="validationName();" placeholder="Name"></td>
+                <td class="feedback_col"><span id="firstnameprompt"></span></td>
+            </tr>
+
+            <tr>
+                <td class="label_col">Last Name</td>
+                <td class="input_col"><input type="text" name="lastname" id="lastname" onblur="validationLastName();" placeholder="Last Name"></td>
+                <td class="feedback_col"><span id="lastnamepromp"></span></td>
+            </tr>
+
+            <tr>
+                <td class="label_col">Phone</td>
+                <td class="input_col"><input type="text" name="phone"  id ="phone" onblur="validationPhone();" placeholder="xxxx - xxxxxx"></td>
+                <td class="feedback_col"><span id="phoneprompt"></span></td>
+            </tr>
+
+            <tr>
+                <td class="label_col">DNI</td>
+                <td class="input_col"><input type="text" name="dni"  id="dni" onblur="validationDNI();" placeholder="DNI"></td>
+                <td class="feedback_col"><span id="dniprompt"></span></td>
+            </tr>
+            <tr>
+                <td class="label_col">Select a Legal Issue: </td>
+                <td><input type="checkbox" name="legalissue" value="Labor">Labor 
+                    <input type="checkbox" name="legalissue" value="Criminal">Criminal
+                    <input type="checkbox" name="legalissue" value="Corporate">Corporate
+                    <input type="checkbox" name="legalissue" value="Inmigration">Inmigration
+                </td>  
+            </tr>
+            <tr>
+                <td class="label_col">Select Urgency</td>
+                <td><input type="radio" name="Urgency" value="emergency">Emergency 
+                    <input type="radio" name="Urgency" value="normal">Normal
+                </td>  
+            </tr>
+        </table>
+
+        </div> 
+    </form>
+    
+    <div class="finalButtons">
+        <button onclick="CheckPerson();">Verify Previos Consults</button>
+    </div>
+  
+
+
+    <div>
+        <p id="results"></p>
+    </div>
+
+    
+</body>
+</html>
